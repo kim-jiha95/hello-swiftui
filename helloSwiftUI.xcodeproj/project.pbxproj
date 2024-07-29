@@ -14,6 +14,7 @@
 		9FAECCC82C576F0800AE56C8 /* helloSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAECCC72C576F0800AE56C8 /* helloSwiftUITests.swift */; };
 		9FAECCD22C576F0800AE56C8 /* helloSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAECCD12C576F0800AE56C8 /* helloSwiftUIUITests.swift */; };
 		9FAECCD42C576F0800AE56C8 /* helloSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAECCD32C576F0800AE56C8 /* helloSwiftUIUITestsLaunchTests.swift */; };
+		9FAECCE12C578E8500AE56C8 /* HikeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAECCE02C578E8500AE56C8 /* HikeDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9FAECCCD2C576F0800AE56C8 /* helloSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helloSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAECCD12C576F0800AE56C8 /* helloSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloSwiftUIUITests.swift; sourceTree = "<group>"; };
 		9FAECCD32C576F0800AE56C8 /* helloSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9FAECCE02C578E8500AE56C8 /* HikeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				9FAECCB82C576F0600AE56C8 /* ContentView.swift */,
 				9FAECCBA2C576F0800AE56C8 /* Assets.xcassets */,
 				9FAECCBC2C576F0800AE56C8 /* Preview Content */,
+				9FAECCE02C578E8500AE56C8 /* HikeDetailScreen.swift */,
 			);
 			path = helloSwiftUI;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAECCE12C578E8500AE56C8 /* HikeDetailScreen.swift in Sources */,
 				9FAECCB92C576F0600AE56C8 /* ContentView.swift in Sources */,
 				9FAECCB72C576F0600AE56C8 /* helloSwiftUIApp.swift in Sources */,
 			);

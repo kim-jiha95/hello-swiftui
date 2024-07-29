@@ -29,9 +29,9 @@ struct ContentView: View {
                     HikeCellView(hike: hike)
                 }
             }.navigationTitle("Hikes")
-                .navigationDestination(for: Hike.self) {
-                    hike in Text(hike.name)
-                }
+            .navigationDestination(for: Hike.self) { hike in
+                HikeDetailScreen(hike: hike)
+            }
         }
     }
 }
