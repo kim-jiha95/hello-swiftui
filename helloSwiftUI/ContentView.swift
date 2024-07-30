@@ -7,36 +7,48 @@
 
 import SwiftUI
 
+// Pre iOS 17
+class AppState: ObservedObject {
+    @Published var isOn: Bool = false
+}
 struct LightBulbView: View {
     
-    @Binding var isOn: Bool
+    @EnvironmentObject private var appState: AppState
     
     var body: some View {
         VStack {
-            Image(systemName: isOn ? "lightbulb.fill": "lightbulb")
+            Image(systemName: appState.isOn ? "lightbulb.fill": "lightbulb")
                 .font(.largeTitle)
-                .foregroundStyle(isOn ? .yellow: .black)
+                .foregroundStyle(appState.isOn ? .yellow: .black)
             Button("Toggle") {
-                isOn.toggle()
+                appState.isOn.toggle()
             }
         }
     }
 }
 
+struct LightRoomView: View {
+    
+    var body: some View {
+        LightBulbView()
+    }
+}
+
 struct ContentView: View {
     
-    @State private var isLightOn: Bool = false
+    @EnvironmentObject private var appState: AppState
     
     var body: some View {
         VStack {
-            LightBulbView(isOn: $isLightOn)
+            LightRoomView()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(isLightOn ? .black: .white)
+        .background(appState.isOn ? .black: .white)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(AppState())
 }
