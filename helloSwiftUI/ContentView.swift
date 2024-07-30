@@ -6,23 +6,27 @@
 //
 
 import SwiftUI
+import Observation
 
-// Pre iOS 17
-class AppState: ObservedObject {
-    @Published var isOn: Bool = false
+@Observable
+class AppState {
+    var isOn: Bool = false
 }
 struct LightBulbView: View {
     
-    @EnvironmentObject private var appState: AppState
+    @Environment(AppState.self) private var appState: AppState
     
     var body: some View {
+        
+        @Bindable var appState = appState
         VStack {
             Image(systemName: appState.isOn ? "lightbulb.fill": "lightbulb")
                 .font(.largeTitle)
                 .foregroundStyle(appState.isOn ? .yellow: .black)
-            Button("Toggle") {
-                appState.isOn.toggle()
-            }
+//            Button("Toggle") {
+//                appState.isOn.toggle()
+//            }
+            Toggle("isOn", isOn: $appState.isOn)
         }
     }
 }
@@ -36,7 +40,7 @@ struct LightRoomView: View {
 
 struct ContentView: View {
     
-    @EnvironmentObject private var appState: AppState
+    @Environment(AppState.self) private var appState: AppState
     
     var body: some View {
         VStack {
@@ -50,5 +54,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(AppState())
+        .environment(AppState())
 }
