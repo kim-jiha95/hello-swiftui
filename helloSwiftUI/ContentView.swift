@@ -6,53 +6,22 @@
 //
 
 import SwiftUI
-import Observation
-
-@Observable
-class AppState {
-    var isOn: Bool = false
-}
-struct LightBulbView: View {
-    
-    @Environment(AppState.self) private var appState: AppState
-    
-    var body: some View {
-        
-        @Bindable var appState = appState
-        VStack {
-            Image(systemName: appState.isOn ? "lightbulb.fill": "lightbulb")
-                .font(.largeTitle)
-                .foregroundStyle(appState.isOn ? .yellow: .black)
-//            Button("Toggle") {
-//                appState.isOn.toggle()
-//            }
-            Toggle("isOn", isOn: $appState.isOn)
-        }
-    }
-}
-
-struct LightRoomView: View {
-    
-    var body: some View {
-        LightBulbView()
-    }
-}
 
 struct ContentView: View {
-    
-    @Environment(AppState.self) private var appState: AppState
-    
     var body: some View {
         VStack {
-            LightRoomView()
+            Button("Get Coordinates") {
+                Task {
+                    let geocodingClient = GeocodingClient()
+                    let location = try! await geocodingClient.coordinateByCity("Houston")
+                    print(location)
+                }
+            }
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(appState.isOn ? .black: .white)
     }
 }
 
 #Preview {
     ContentView()
-        .environment(AppState())
 }
