@@ -13,6 +13,7 @@
 		9F9DF92F2C5A765D006EE6E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DF92E2C5A765D006EE6E5 /* Constants.swift */; };
 		9F9DF9312C5A76F4006EE6E5 /* GeocodingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DF9302C5A76F4006EE6E5 /* GeocodingClient.swift */; };
 		9F9DF9332C5A790F006EE6E5 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DF9322C5A790F006EE6E5 /* WeatherClient.swift */; };
+		9F9DF9362C5A7A07006EE6E5 /* MeasurementFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DF9352C5A7A07006EE6E5 /* MeasurementFormatter+Extensions.swift */; };
 		9FAECCB72C576F0600AE56C8 /* helloSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAECCB62C576F0600AE56C8 /* helloSwiftUIApp.swift */; };
 		9FAECCB92C576F0600AE56C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAECCB82C576F0600AE56C8 /* ContentView.swift */; };
 		9FAECCBB2C576F0800AE56C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAECCBA2C576F0800AE56C8 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		9F9DF92E2C5A765D006EE6E5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F9DF9302C5A76F4006EE6E5 /* GeocodingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingClient.swift; sourceTree = "<group>"; };
 		9F9DF9322C5A790F006EE6E5 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+		9F9DF9352C5A7A07006EE6E5 /* MeasurementFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		9FAECCB32C576F0600AE56C8 /* helloSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAECCB62C576F0600AE56C8 /* helloSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloSwiftUIApp.swift; sourceTree = "<group>"; };
 		9FAECCB82C576F0600AE56C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9F9DF9342C5A79F3006EE6E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F9DF9352C5A7A07006EE6E5 /* MeasurementFormatter+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9FAECCAA2C576F0600AE56C8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		9FAECCB52C576F0600AE56C8 /* helloSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9F9DF9342C5A79F3006EE6E5 /* Extensions */,
 				9F9DF92D2C5A7651006EE6E5 /* Utilities */,
 				9F9DF92A2C5A7626006EE6E5 /* Clients */,
 				9F9DF9252C5A7508006EE6E5 /* Models */,
@@ -304,6 +315,7 @@
 				9F9DF9312C5A76F4006EE6E5 /* GeocodingClient.swift in Sources */,
 				9FAECCB92C576F0600AE56C8 /* ContentView.swift in Sources */,
 				9FAECCB72C576F0600AE56C8 /* helloSwiftUIApp.swift in Sources */,
+				9F9DF9362C5A7A07006EE6E5 /* MeasurementFormatter+Extensions.swift in Sources */,
 				9F9DF9332C5A790F006EE6E5 /* WeatherClient.swift in Sources */,
 				9F9DF92C2C5A763C006EE6E5 /* APIEndpoint.swift in Sources */,
 				9F9DF92F2C5A765D006EE6E5 /* Constants.swift in Sources */,
